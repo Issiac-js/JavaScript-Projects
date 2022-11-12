@@ -11,3 +11,12 @@ function myFunction(){ // Another funtion made to change the text from "click he
 
 };
 
+// MATH SECTION FOLLOWING 
+
+function math_function(){
+
+    var addition = 2 + 2;
+    document.getElementById("math").innerHTML = "2+2= " + addition;
+
+};
+
