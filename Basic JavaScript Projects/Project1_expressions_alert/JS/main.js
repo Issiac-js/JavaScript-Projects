@@ -21,3 +21,13 @@ var sent1 = "<br>This is the beginning of the string"; // first part of the fina
 var sent2 = " and this is the end of the string"; // second part of the final string
 
 document.write(sent1 + sent2); // prints concatenated string to webpage.
+
+
+
+var myFunction(){  // a function to play sound
+    let beat = new Audio(/sound/click.mp3) // The sound
+
+    beat.play(); // play sound
+
+
+};
