@@ -66,5 +66,15 @@ function not_Not() { // should return True since it assumes the statement is not
     document.getElementById("Not1").innerHTML = !(5>20); //Display output on webpage
 };
 
+function numString(){ // function to place a number with a string
+    var x = 10;
+    var y = "This is a string";
+    return x + y;
+
+};
+
+function send(){
+    document.getElementById("step2").innerHTML = numString();
+}
 
  
