@@ -72,37 +72,37 @@ function placeXOrO(squareNumber) {
 //drawLine() function is called to draw a line on the screen if the win conditon is met.
 function checkWinConditions() {
     // x 0, 1, 2 condtion.
-    if (arrayIncludes('0X', '1X', '2X')) { drawWinLine(50, 100, 558, 100) }
+    if (arrayIncludes('0X', '1X', '2X')) {drawWinLine(50, 100, 558, 100) }
     // x 3, 4, 5 condtion
-    else if (arrayIncludes('3X', '4X', '5x')) { drawWinLine(50, 304, 558, 508) }
+    else if (arrayIncludes('3X', '4X', '5x')) {drawWinLine(50, 304, 558, 508)}
     // X 6, 7, 8 condtion.
-    else if (arrayIncludes('6X', '7X', '8X')) { drawWinLine(50, 508, 558, 508) }
+    else if (arrayIncludes('6X', '7X', '8X')) {drawWinLine(50, 508, 558, 508)}
     // X 0, 3, 6condtion
-    else if (arrayIncludes('0X', '3X', '6X')) { drawWinLine(100, 50, 100, 558) }
+    else if (arrayIncludes('0X', '3X', '6X')) {drawWinLine(100, 50, 100, 558)}
     // X 1, 4, 7
-    else if (arrayIncludes('1X', '4X', '7X')) { drawWinLine(304, 50, 304, 558) }
+    else if (arrayIncludes('1X', '4X', '7X')) {drawWinLine(304, 50, 304, 558)}
     // X 2, 5, 8 condtion
-    else if (arrayIncludes('2X', '5X', '8X')) { drawWinLine(508, 50, 508, 558) }
+    else if (arrayIncludes('2X', '5X', '8X')) {drawWinLine(508, 50, 508, 558)}
     // X 6, 4, 2 condtion
-    else if (arrayIncludes('6X', '4X', '2X')) { drawWinLine(100, 508, 510, 90) }
+    else if (arrayIncludes('6X', '4X', '2X')) {drawWinLine(100, 508, 510, 90)}
     // X 0, 4, 8 
-    else if (arrayIncludes('0X', '4X', '8X')) { drawWinLine(100, 100, 520, 520) }
+    else if (arrayIncludes('0X', '4X', '8X')) {drawWinLine(100, 100, 520, 520)}
     // O 0, 1, 2 condtion 
-    else if (arrayIncludes('0O', '1O', '2O')) { drawWinLine(50, 100, 558, 100) }
+    else if (arrayIncludes('0O', '1O', '2O')) {drawWinLine(50, 100, 558, 100)}
     // O 3, 4, 5 condtion 
-    else if (arrayIncludes('3O', '4O', '5O')) { drawWinLine(50, 304, 558, 304) }
+    else if (arrayIncludes('3O', '4O', '5O')) {drawWinLine(50, 304, 558, 304)}
     // O 6 7 8 conditon 
-    else if (arrayIncludes('6O', '7O', '8O')) { drawWinLine(50, 508, 558, 508) }
+    else if (arrayIncludes('6O', '7O', '8O')) {drawWinLine(50, 508, 558, 508)}
     // O 0, 3 , 6
-    else if (arrayIncludes('0O', '3O', '6O')) { drawWinLine(100, 50, 100, 558) }
+    else if (arrayIncludes('0O', '3O', '6O')) {drawWinLine(100, 50, 100, 558)}
     // O 1, 4, 7 condtion 
-    else if (arrayIncludes('1O', '4O', '7O')) { drawWinLine(304, 50, 304, 558) }
+    else if (arrayIncludes('1O', '4O', '7O')) {drawWinLine(304, 50, 304, 558)}
     // O 2, 5, 8
-    else if (arrayIncludes('2O', '5O', '8O')) { drawWinLine(508, 50, 508, 558) }
+    else if (arrayIncludes('2O', '5O', '8O')) {drawWinLine(508, 50, 508, 558)}
     // 0 6, 4, 2
-    else if (arrayIncludes('6O', '4O', '2O')) { drawWinLine(100, 508, 510, 90) }
+    else if (arrayIncludes('6O', '4O', '2O')) {drawWinLine(100, 508, 510, 90)}
     // O 0 ,4,  8
-    else if (arrayIncludes('0O', '4O', '8O')) { drawWinLine(100, 100, 520, 520) }
+    else if (arrayIncludes('0O', '4O', '8O')) {drawWinLine(100, 100, 520, 520)}
     // THis condtion checks for a tie. If none of the above condtions are met and 
     //9 squares are selected the code executes.
     else if (selectedSquares.length >= 9) {
@@ -119,7 +119,7 @@ function checkWinConditions() {
         const c = selectedSquares.includes(squareC);
         // If the 3 varibles we pass are all included in our array then
         // true is returned and our else if condtion excutes the drawLine() function
-        if (a === tru && b === true && c === true) { return true; }
+        if (a === true && b === true && c === true) {return true;}
     }
 
 
@@ -162,45 +162,46 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         y = y1;
 
 
-}
 
-// This Function insteracts with the canvas.
-function AnimateLineDrawing() {
-    // This var creates a loop.
-    const animationLoop = requestAnimationFrame(AnimateLineDrawing);
-    // This method clears content from the last loop itieration.
-    c.clearRect(0, 0, 608, 608)
-    // this method starts a new path. 
-    c.beginPath();
-    // This method moves us to a starting point in our line. 
-    c.moveTo(x1, y1);
-    // this method indicates the end point in our line.
-    c.lineto(x, y);
-    // This method sets the width of our line
-    c.lineWidth = 10;
-    // This method sets the color of our line.
-    c.strokeStyle = 'rgba(10, 255, 33, .8)';
-    // This method draws everything we laid out above.
-    c.stroke();
-    // This condtion checks if we've reached the endpoints.
-    if (x1 <= x2 && y1 <= y2) {
+
+    // This Function insteracts with the canvas.
+    function animateLineDrawing() {
+        // This var creates a loop.
+        const animationLoop = requestAnimationFrame(animateLineDrawing);
+        // This method clears content from the last loop itieration.
+        c.clearRect(0, 0, 608, 608)
+        // this method starts a new path. 
+        c.beginPath();
+        // This method moves us to a starting point in our line. 
+        c.moveTo(x1, y1);
+        // this method indicates the end point in our line.
+        c.lineTo(x, y);
+         // This method sets the width of our line
+        c.lineWidth = 10;
+        // This method sets the color of our line.
+        c.strokeStyle = 'rgba(10, 255, 33, .8)';
+        // This method draws everything we laid out above.
+        c.stroke();
+        // This condtion checks if we've reached the endpoints.
+        if (x1 <= x2 && y1 <= y2) {
         //This condtion adds 10 to the previous end x endpoint.
-        if  (x < x2) { x += 10; }
+            if  (x < x2) { x += 10; }
         // This condtion adds 10 to the previous end y endpoint.
-        if (y < y2) { y += 10; }
+            if (y < y2) { y += 10; }
         // this condition is similar to the one above
         // This is necessary for the 6, 4, 2 win condtions.
-        if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
+            if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
 
-    }
+        }
 
-    //This condtiuon is similare to the one above.
-    // This is necessary for the 6, 4, 2 win condition.
-    if (x1 <= x2 && y1 >= y2) {
-        if (x < x2) { x += 10; }
-        if (y > y2) { y -= 10; }
-        if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
+        //This condtiuon is similare to the one above.
+        // This is necessary for the 6, 4, 2 win condition.
+        if (x1 <= x2 && y1 >= y2) {
+            if (x < x2) { x += 10; }
+            if (y > y2) { y -= 10; }
+            if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
 
+        }
     }
 
     // This function clears our canvas after our win line is drawn.
@@ -218,7 +219,7 @@ function AnimateLineDrawing() {
     // this line plays win sounds.
     audio('./media/winGame.mp3');
     //THis line calss our main animation loop.
-    AnimateLineDrawing();
+    animateLineDrawing();
     //This line waits 1 second then, clears canvas resets game, an allows clicking again
     setTimeout(function () { clear(); resetGame(); }, 1000);
 }
