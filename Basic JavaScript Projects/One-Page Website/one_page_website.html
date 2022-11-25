@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <link rel="stylesheet" href="./css/shared.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <script src="JS/one_page_website.js" defer></script>
+  <head>
+    <meta charset="utf-8">
+    <title>Car Pages</title>
+  </head>
+  <body>
+    <!--- Nav --->
+    <div class="wrap">
+      <div class="menu-container">
+        <ul class="menu">
+          <a href="#home" id="link"><li>Home</li></a>
+          <a href="#photos"><li>Gallery</li></a>
+          <a href="#video"><li>Videos</li></a>
+          <a href="#contact"><li>Contact</li></a>
+        </ul>
+      </div>
+    </div>
+    <!--- End Nav --->
+
+    <!--- Home --->
+    <div id="home">
+      <div class="container">
+        <div class="text-center">
+          <span class="head-main">Car Pages</span>
+        </div>
+      </div>
+    </div>
+
+    <!--- End Home --->
+
+    <!--- Photos --->
+    <section id="photos">
+      <div class="container">
+        <h1>Photos</h1>
+        <div class="flex-container">
+          <!--- Photo container 1 --->
+          <div class="photo-container">
+            <div class="photo">
+                <img src="./images/thumb/thumbnail_1.jpg" alt="Engine Bay" onclick="myFunction()">
+              <div class="photo-overlay">
+                <h3>Click to Enlarge</h3>
+                <p>The Default..</p>
+              </div>
+            </div>
+          </div>
+          <!--- END Photo container 1 --->
+          <!--- Photo container 2 --->
+          <div class="photo-container">
+            <div class="photo">
+                <img src="./images/thumb/thumbnail_2.png" alt="Front quarter picture">
+              <div class="photo-overlay">
+                <h3>Click to Enlarge</h3>
+                <p>The Glare...</p>
+              </div>
+            </div>
+          </div>
+          <!--- END Photo container 2 --->
+          <!--- Photo container 3 --->
+          <div class="photo-container">
+            <div class="photo">
+                <img src="./images/thumb/thumbnail_3.png" alt="Full Front picture">
+              <div class="photo-overlay">
+                <h3>Click to Enlarge</h3>
+                <p>Face of a champ.</p>
+              </div>
+            </div>
+          </div>
+          <!--- END Photo container 3 --->
+          <!--- Photo container 4 --->
+          <div class="photo-container">
+            <div class="photo">
+                <img src="./images/thumb/thumbnail_4.png" alt="Back end picture">
+              <div class="photo-overlay">
+                <h3>Click to Enlarge</h3>
+                <p>Don't look back.</p>
+              </div>
+            </div>
+          </div>
+          <!--- END Photo container 4 --->
+          <!--- Photo container 5 --->
+          <div class="photo-container">
+            <div class="photo">
+                <img src="./images/thumb/thumbnail_5.png" alt="Side profile picture">
+              <div class="photo-overlay">
+                <h3>Click to Enlarge</h3>
+                <p>A mugshot perhaps?</p>
+              </div>
+            </div>
+          </div>
+          <!--- END Photo container 5 --->
+          <!--- Photo container 6 --->
+          <div class="photo-container">
+            <div class="photo">
+                <img src="./images/thumb/thumbnail_6.png" alt="front quarter picture">
+              <div class="photo-overlay">
+                <h3>Click to Enlarge</h3>
+                <p>Got my eyes on you.</p>
+              </div>
+            </div>
+          </div>
+          <!--- END Photo container 6 --->
+          <!--- Photo container 7 --->
+          <div class="photo-container">
+            <div class="photo">
+                <img src="./images/thumb/thumbnail_7.png" alt="Front quarter car 2">
+              <div class="photo-overlay">
+                <h3>Click to Enlarge</h3>
+                <p>Ready for a fight.</p>
+              </div>
+            </div>
+          </div>
+          <!--- END Photo container 7 --->
+          <!--- Photo container 8 --->
+          <div class="photo-container">
+            <div class="photo">
+                <img src="./images/thumb/thumbnail_8.png" alt="Front quarter car 3">
+              <div class="photo-overlay">
+                <h3>Click to Enlarge</h3>
+                <p>We seen where this is going.</p>
+              </div>
+            </div>
+          </div>
+          <!--- END Photo container 8 --->
+          <!--- Photo container 9 --->
+          <div class="photo-container">
+            <div class="photo">
+                <img src="./images/thumb/thumbnail_9.png" alt="Rear quarter car 4">
+              <div class="photo-overlay">
+                <h3>Click to Enlarge</h3>
+                <p>See you later.</p>
+              </div>
+            </div>
+          </div>
+          <!--- END Photo container 9 --->
+        </div>
+      </div>
+    </section>
+    <!--- End Photos --->
+    <!-- LIGHTBOX-->
+    <div class="row">
+      <div class="column">
+        <img src="./Images/Flowers/plant1-small.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="./Images/Flowers/plant2-small.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="./Images/Flowers/plant3-small.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="./Images/Flowers/plant4-small.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="./Images/Flowers/plant1.png" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="./Images/Flowers/plant2.png" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="./Images/Flowers/plant3.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="./Images/Flowers/plant4.png" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+    
+    
+        <div class="column">
+          <img class="demo cursor" src="./Images/Flowers/plant1.png" style="width:100%" onclick="currentSlide(1)" alt="Pinkish Flowers">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./Images/Flowers/plant2.png" style="width:100%" onclick="currentSlide(2)" alt="Sun Flowers">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./Images/Flowers/plant3.png" style="width:100%" onclick="currentSlide(3)" alt="Shrubs">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./Images/Flowers/plant4.png" style="width:100%" onclick="currentSlide(4)" alt="Small Plants">
+        </div>
+      </div>
+    </div>
+
+
+    <!--VIDEO SECTION-->
+    <section  id="video">
+      <div class="container">
+        <h1>videos</h1>
+          <div class="video-container">
+          <div class="photo-container">
+              <div class="photo">
+                <iframe  src="https://www.youtube.com/embed/zuKEnaZWp3E" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="photo-container">
+              <div class="photo">
+                <iframe  src="https://www.youtube.com/embed/lMbaZzeKJC8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+          </div>
+        </div>
+    </div>
+    </section>
+    <!-- END VIDEO SECTION-->
+    <!--- RSVP --->
+    <section id="contact">
+      <div class="container">
+        <div class="heading-padding">
+          <h1 class="heading-padding">Contact us</h1>
+          <div class="reservation">
+            <h2><span>All the information at your fingertips</span><br>
+                Just one click away!
+            </h2>
+            <p class="rsvp-text">
+              please Provide us with your basic contact information.
+            </p>
+            <div>
+              <form action="" method="post">
+                <input class="rsvp" type="text" name="fn" value="First Name">
+                <input class="rsvp" type="text" name="ln" value="Last Name">
+                <input class="rsvp" type="text" name="eml" value="Email">
+                <input  class="rsvp" type="text" name="pn" value="Phone Number">
+                <div class="form-spacer">
+                  <label class="terms">Terms and conditions</label>
+                </div>
+                <div class="submit">
+                  <input type="submit" name="" value="Submit">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--- END RSVP --->
+
+    <!--- FOOTER --->
+    <div id="footer">
+      <a href="https://www.ultimatespecs.com/car-specs" target="_blank">Another great resource</a> <br>
+    <em> www.carstats.com &nbsp;|&nbsp; &copy; 2022</em>
+    </div>
+
+    <!--- END FOOTER --->
+
+  </body>
+</html>
